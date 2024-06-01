@@ -213,7 +213,7 @@ button:hover {
 
 /* responsive design for mobile 375px */
 
-@media (max-width:23.5rem) {
+@media (max-width:32.875rem) {
     .product-card {
         display: flex;
         flex-direction: column;
