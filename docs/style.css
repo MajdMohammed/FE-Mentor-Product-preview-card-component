@@ -1,0 +1,242 @@
+/* reset browser default values */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin-block-end: 0;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* styling Code */
+@font-face {
+    font-family: "montserrat";
+    src: url(./assets/Montserrat/Montserrat-VariableFont_wght.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "fraunces";
+    src: url(./assets/Fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf) format("truetype");
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: hsl(30, 38%, 92%);
+}
+
+.product-card {
+    display: flex;
+    flex-direction: row;
+}
+
+.img-container {
+    width: 18rem;
+}
+
+.img-container img {
+    border-radius: 10px 0px 0px 10px;
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    background-color: white;
+    width: 18rem;
+
+    padding: 30px;
+    border-radius: 0px 10px 10px 0px;
+}
+
+/* content font style */
+.type {
+    color: hsl(228, 12%, 48%);
+
+    text-transform: uppercase;
+    letter-spacing: 4px;
+
+    font-size: clamp(0.8rem, 0.5rem + 0.3vw, 1.5rem);
+    font-weight: 500;
+    font-family: "montserrat";
+
+    margin-top: -4px;
+}
+
+.name {
+    color: hsl(212, 21%, 14%);
+
+    text-transform: capitalize;
+
+    font-family: "fraunces";
+    font-weight: 700;
+    font-size: clamp(1rem, 1rem + 1vw, 3rem);
+
+    margin-top: -3px;
+}
+
+.description {
+    color: hsl(228, 12%, 48%);
+
+    font-family: "montserrat";
+    font-size: clamp(0.875rem, 0.5rem + 0.4vw, 1.5rem);
+    font-weight: 500;
+
+    margin-top: -5px;
+}
+
+/* product price */
+.flexbox-price {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    margin-top: -17px;
+}
+
+.price {
+    font-size: clamp(1.5rem, 1rem + 1vw, 3rem);
+    font-family: "fraunces";
+    font-weight: 700;
+
+    color: hsl(158, 36%, 37%);
+    margin-right: 20px;
+}
+
+.discount-price {
+    font-family: "fraunces";
+    font-size: clamp(1rem, 0.5rem + 0.5vw, 1.5rem);
+
+    color: hsl(228, 12%, 48%);
+    text-decoration: line-through;
+    font-weight: 500;
+    margin-bottom: -5px;
+}
+
+/* button */
+button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    border-radius: 7px;
+    border: none;
+    padding: 15px;
+
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+
+    font-family: "montserrat";
+    font-size: clamp(0.875rem, 0.3rem + 0.5vw, 2rem);
+    font-weight: 700;
+}
+
+button img {
+    margin-right: 10px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: hsl(158, 40%, 20%);
+}
+
+/* responsive design for mobile 375px */
+
+@media (max-width:376px) {
+    .product-card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img-container {
+        width: 22rem;
+    }
+
+    .img-container img {
+        border-radius: 10px 10px 0px 0px;
+    }
+
+    .content-container {
+        width: 22rem;
+        height: 22rem;
+
+        padding: 30px;
+        border-radius: 0px 0px 10px 10px;
+    }
+
+    /* h1 font size changed */
+    .name {
+        font-size: clamp(1rem, 1.7rem + 1vw, 3rem);
+    }
+}

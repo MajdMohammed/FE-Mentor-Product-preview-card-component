@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frontend mentor challenge building Product previw card component using html and css with responsive layouts">
+    <title>Frontend mentor challenge | Product previw card component</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+</head>
+<body>
+    <div class="product-card">
+        <div class="img-container">
+            <picture>
+                <source srcset="./images/image-product-mobile.jpg" media="(max-width: 376px)">
+                <img src="./images/image-product-desktop.jpg" alt="Perfume product of Gabrielle | Chanel in the middle with some green papers on the top and the bottom of it">
+            </picture>
+        </div>
+        <div class="content-container">
+            <p class="product type">perfume</p>
+            <h1 class="product name">gabrielle essence eau de parfum</h1>
+            <p class="product description">A floral, solar and voluptuous interpretation composed by olivier polge, Perfumer-Creator for the House of CHANEL.</p>
+            <div class="flexbox-price">
+                <h1 class="product price">$149.99</h1>
+                <h2 class="product discount-price">$169.99</h2>
+            </div>
+            <button type="submit">
+            <img src="./images/icon-cart.svg" alt="transparent products cart icon">
+            Add to Cart
+            </button>
+        </div>
+    </div>
+</body>
+</html>
