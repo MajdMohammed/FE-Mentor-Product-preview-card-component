@@ -99,7 +99,7 @@ body {
 }
 
 .img-container {
-    width: 18rem;
+    max-width: 18rem;
 }
 
 .img-container img {
@@ -112,7 +112,7 @@ body {
     flex-direction: column;
 
     background-color: white;
-    width: 18rem;
+    max-width: 18rem;
 
     padding: 30px;
     border-radius: 0px 10px 10px 0px;
@@ -189,7 +189,7 @@ button {
     justify-content: center;
     align-items: center;
 
-    width: 100%;
+    max-width: 100%;
     border-radius: 7px;
     border: none;
     padding: 15px;
@@ -213,14 +213,14 @@ button:hover {
 
 /* responsive design for mobile 375px */
 
-@media (max-width:376px) {
+@media (max-width:23.5rem) {
     .product-card {
         display: flex;
         flex-direction: column;
     }
 
     .img-container {
-        width: 22rem;
+        max-width: 22rem;
     }
 
     .img-container img {
@@ -228,15 +228,27 @@ button:hover {
     }
 
     .content-container {
-        width: 22rem;
-        height: 22rem;
+        max-width: 22rem;
 
         padding: 30px;
         border-radius: 0px 0px 10px 10px;
     }
 
     /* h1 font size changed */
+    .type {
+        margin-bottom: 20px;
+    }
+
     .name {
         font-size: clamp(1rem, 1.7rem + 1vw, 3rem);
+        margin-bottom: 24px;
+    }
+
+    .description {
+        margin-bottom: 24px;
+    }
+
+    .flexbox-price {
+        margin-bottom: 24px;
     }
 }
