@@ -75,6 +75,23 @@ select {
 }
 
 /* styling Code */
+:root {
+    --f-fam-montserrat: "montserrat";
+    --f-fam-fraunces: "fraunces";
+    --f-weight-500: 500;
+    --f-weight-700: 700;
+
+    --color-dark-cyan: hsl(158, 36%, 37%);
+    --color-very-dark-blue: hsl(212, 21%, 14%);
+    --color-dark-grayish-blue: hsl(228, 12%, 48%);
+
+    --max-width-desktop: 18rem;
+    --max-width-mobile: 22rem;
+
+    --padd-30: 30px;
+    --margin-24: 24px;
+}
+
 @font-face {
     font-family: "montserrat";
     src: url(./assets/Montserrat/Montserrat-VariableFont_wght.ttf) format("truetype");
@@ -99,7 +116,7 @@ body {
 }
 
 .img-container {
-    max-width: 18rem;
+    max-width: var(--max-width-desktop);
 }
 
 .img-container img {
@@ -112,44 +129,44 @@ body {
     flex-direction: column;
 
     background-color: white;
-    max-width: 18rem;
+    max-width: var(--max-width-desktop);
 
-    padding: 30px;
+    padding: var(--padd-30);
     border-radius: 0px 10px 10px 0px;
 }
 
 /* content font style */
 .type {
-    color: hsl(228, 12%, 48%);
+    color: var(--color-dark-grayish-blue);
 
     text-transform: uppercase;
     letter-spacing: 4px;
 
     font-size: clamp(0.8rem, 0.5rem + 0.3vw, 1.5rem);
-    font-weight: 500;
-    font-family: "montserrat";
+    font-weight: var(--f-weight-500);
+    font-family: var(--f-fam-montserrat);
 
     margin-top: -4px;
 }
 
 .name {
-    color: hsl(212, 21%, 14%);
+    color: var(--color-very-dark-blue);
 
     text-transform: capitalize;
 
-    font-family: "fraunces";
-    font-weight: 700;
+    font-family: var(--f-fam-fraunces);
+    font-weight: var(--f-weight-700);
     font-size: clamp(1rem, 1rem + 1vw, 3rem);
 
     margin-top: -3px;
 }
 
 .description {
-    color: hsl(228, 12%, 48%);
+    color: var(--color-dark-grayish-blue);
 
-    font-family: "montserrat";
+    font-family: var(--f-fam-montserrat);
     font-size: clamp(0.875rem, 0.5rem + 0.4vw, 1.5rem);
-    font-weight: 500;
+    font-weight: var(--f-weight-500);
 
     margin-top: -5px;
 }
@@ -165,20 +182,20 @@ body {
 
 .price {
     font-size: clamp(1.5rem, 1rem + 1vw, 3rem);
-    font-family: "fraunces";
-    font-weight: 700;
+    font-family: var(--f-fam-fraunces);
+    font-weight: var(--f-weight-700);
 
     color: hsl(158, 36%, 37%);
-    margin-right: 20px;
+    margin-right: var(--margin-24);
 }
 
 .discount-price {
-    font-family: "fraunces";
+    font-family: var(--f-fam-fraunces);
     font-size: clamp(1rem, 0.5rem + 0.5vw, 1.5rem);
 
-    color: hsl(228, 12%, 48%);
+    color: var(--color-dark-grayish-blue);
     text-decoration: line-through;
-    font-weight: 500;
+    font-weight: var(--f-weight-500);
     margin-bottom: -5px;
 }
 
@@ -194,12 +211,12 @@ button {
     border: none;
     padding: 15px;
 
-    background-color: hsl(158, 36%, 37%);
+    background-color: var(--color-dark-cyan);
     color: white;
 
-    font-family: "montserrat";
+    font-family: var(--f-fam-montserrat);
     font-size: clamp(0.875rem, 0.3rem + 0.5vw, 2rem);
-    font-weight: 700;
+    font-weight: var(--f-weight-700);
 }
 
 button img {
@@ -208,10 +225,10 @@ button img {
 
 button:hover {
     cursor: pointer;
-    background-color: hsl(158, 40%, 20%);
+    background-color: var(--color-very-dark-blue);
 }
 
-/* responsive design for mobile 375px */
+/* responsive design for mobile 525px and below */
 
 @media (max-width:32.875rem) {
     .product-card {
@@ -220,7 +237,7 @@ button:hover {
     }
 
     .img-container {
-        max-width: 22rem;
+        max-width: var(--max-width-mobile);
     }
 
     .img-container img {
@@ -228,27 +245,21 @@ button:hover {
     }
 
     .content-container {
-        max-width: 22rem;
+        max-width: var(--max-width-mobile);
 
-        padding: 30px;
+        padding: var(--padd-30);
         border-radius: 0px 0px 10px 10px;
     }
 
     /* h1 font size changed */
-    .type {
-        margin-bottom: 20px;
-    }
-
     .name {
         font-size: clamp(1rem, 1.7rem + 1vw, 3rem);
-        margin-bottom: 24px;
+        margin-bottom: var(--margin-24);
     }
 
-    .description {
-        margin-bottom: 24px;
-    }
-
+    .type,
+    .description,
     .flexbox-price {
-        margin-bottom: 24px;
+        margin-bottom: var(--margin-24);
     }
 }
